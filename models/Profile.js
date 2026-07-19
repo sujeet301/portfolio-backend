@@ -23,6 +23,7 @@ const profileSchema = new mongoose.Schema(
     linkedinUrl: { type: String, default: '' },
     portfolioUrl: { type: String, default: '' },
     resumeUrl: { type: String, default: '' },
+    profileImage: { type: String, default: '' }, // hosted image URL (e.g. Cloudinary, imgur)
     education: [educationSchema],
     softSkills: [{ type: String }],
     achievements: [{ type: String }],

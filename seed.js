@@ -100,6 +100,7 @@ const profile = {
   linkedinUrl: '', // TODO: add
   portfolioUrl: '', // TODO: add once deployed
   resumeUrl: '', // TODO: add a link to a hosted PDF of your resume
+  profileImage: '', // TODO: add a hosted image URL (or paste one in the admin dashboard)
   education: [
     {
       degree: 'Bachelor of Technology (B.Tech)',
