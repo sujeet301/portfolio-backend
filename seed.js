@@ -107,9 +107,10 @@ const profile = {
   phone: '+91-8750212473',
   location: 'Burari, New Delhi, India',
   githubUrl: 'https://github.com/sujeet301',
+  leetcodeUrl: 'https://www.leetcode.com/sujeet301',
   linkedinUrl: 'https://www.linkedin.com/in/sujeet-chaudhary-236bbb374 ', 
   portfolioUrl: 'https://portfolio-frontend-gold-tau.vercel.app/',
-  resumeUrl: '',
+  resumeUrl: 'https://drive.google.com/file/d/17YBpLkqQMIfEAg80u5hejWSPVmPPteb8/view?usp=drive_link',
   profileImage: '', // TODO: add a hosted image URL (or paste one in the admin dashboard)
   education: [
     {

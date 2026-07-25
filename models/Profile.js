@@ -31,6 +31,7 @@ const profileSchema = new mongoose.Schema(
     location: { type: String, default: 'India' },
     githubUrl: { type: String, default: '' },
     linkedinUrl: { type: String, default: '' },
+    leetcodeUrl: { type: String, default: '' },
     portfolioUrl: { type: String, default: '' },
     resumeUrl: { type: String, default: '' },
     profileImage: { type: String, default: '' }, // hosted image URL (e.g. Cloudinary, imgur)
