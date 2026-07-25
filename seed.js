@@ -5,8 +5,8 @@ const Project = require('./models/Project');
 const Profile = require('./models/Profile');
 
 const skills = [
-  { name: 'Java', category: 'Languages', percentage: 80, order: 1 },
-  { name: 'C++', category: 'Languages', percentage: 75, order: 2 },
+  { name: 'Java', category: 'Languages', percentage: 35, order: 1 },
+  { name: 'C++', category: 'Languages', percentage: 45, order: 2 },
   { name: 'JavaScript', category: 'Languages', percentage: 85, order: 3 },
   { name: 'HTML5', category: 'Languages', percentage: 90, order: 4 },
   { name: 'CSS3', category: 'Languages', percentage: 85, order: 5 },
@@ -42,22 +42,32 @@ const projects = [
   {
     title: 'MultiShop (MERN E-Commerce)',
     description:
-      'A full-featured e-commerce platform with JWT authentication, seller and admin dashboards, REST APIs, and Cloudinary image integration. Deployed on Render and Vercel.',
+      'A full-featured e-commerce platform with customer, seller, and admin dashboards, JWT-based role authentication, REST APIs for products/cart/orders, and Cloudinary image integration. Deployed on Render and Vercel.',
     techStack: ['React', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Cloudinary'],
-    githubUrl: '',
-    liveUrl: '',
+    githubUrl: 'https://github.com/sujeet301/multishop-frontend',
+    liveUrl: 'https://multishop-frontend.vercel.app/',
     featured: true,
     order: 1,
+  },
+  {
+    title: 'Hospital Management System (MERN Stack)',
+    description:
+      'A hospital management application with patient registration, appointment booking, and doctor scheduling, featuring role-based access for Admin, Doctor, and Patient roles.',
+    techStack: ['React', 'Node.js', 'Express.js', 'MongoDB', 'JWT'],
+    githubUrl: 'https://github.com/sujeet301/hospital-management-frontend', // TODO: your resume PDF's links for this project point to the MultiShop repos by mistake — add the real frontend repo URL here
+    liveUrl: 'https://hospital-management-frontend.vercel.app/', // TODO: the "Live: Hospital" text in your resume isn't hyperlinked at all — add the real deployed URL here
+    featured: true,
+    order: 2,
   },
   {
     title: 'MovieVerse',
     description:
       'A responsive movie discovery app using the TMDB API, with a watchlist, favorites list, and OTP-based authentication.',
     techStack: ['React', 'TMDB API', 'OTP Auth'],
-    githubUrl: '',
-    liveUrl: '',
+    githubUrl: 'https://github.com/sujeet301/multishop-frontend', // TODO: your resume PDF's links for this project also point to the MultiShop repos by mistake — add the real frontend repo URL here
+    liveUrl: 'https://movieverse-frontend.vercel.app/', 
     featured: true,
-    order: 2,
+    order: 3,
   },
   {
     title: 'Student Management System',
@@ -66,7 +76,7 @@ const projects = [
     githubUrl: '',
     liveUrl: '',
     featured: false,
-    order: 3,
+    order: 4,
   },
   {
     title: 'News Application',
@@ -75,7 +85,7 @@ const projects = [
     githubUrl: '',
     liveUrl: '',
     featured: false,
-    order: 4,
+    order: 5,
   },
   {
     title: 'Calculator Web Application',
@@ -84,7 +94,7 @@ const projects = [
     githubUrl: '',
     liveUrl: '',
     featured: false,
-    order: 5,
+    order: 6,
   },
 ];
 
@@ -93,21 +103,41 @@ const profile = {
   title: 'Full Stack Web Developer (MERN)',
   summary:
     'Motivated B.Tech student and Full Stack Web Developer with hands-on experience building responsive, scalable web applications using the MERN stack. Passionate about solving algorithmic problems and creating user-friendly applications.',
-  email: 'your.email@example.com', // TODO: update
-  phone: '+91-XXXXXXXXXX', // TODO: update
-  location: 'India',
+  email: 'sujeetwebdev@gmail.com',
+  phone: '+91-8750212473',
+  location: 'Burari, New Delhi, India',
   githubUrl: 'https://github.com/sujeet301',
-  linkedinUrl: '', // TODO: add
-  portfolioUrl: '', // TODO: add once deployed
-  resumeUrl: '', // TODO: add a link to a hosted PDF of your resume
+  linkedinUrl: 'https://www.linkedin.com/in/sujeet-chaudhary-236bbb374 ', 
+  portfolioUrl: 'https://portfolio-frontend-gold-tau.vercel.app/',
+  resumeUrl: '',
   profileImage: '', // TODO: add a hosted image URL (or paste one in the admin dashboard)
   education: [
     {
-      degree: 'Bachelor of Technology (B.Tech)',
-      institution: 'Add your college/university name', // TODO
-      year: 'Expected graduation - add year', // TODO
+      degree: 'Bachelor of Technology (B.Tech), Computer Science',
+      institution: 'IITM Group of Institutions, Murthal',
+      year: '2023 - 2027 ', // TODO: confirm your expected graduation year, this is estimated from a standard 4-year B.Tech
       details:
         'Relevant coursework: Data Structures & Algorithms, DBMS, Operating Systems, Computer Networks, Software Engineering, OOP',
+    },
+    {
+      degree: 'Web Development Course (PHP)',
+      institution: 'CCDM (ISO 9001:2015 Certified Institute)',
+      year: 'Mar 2025 - Jul 2025',
+      details: 'Completed a 4-month PHP-focused web development course with Grade A+.',
+    },
+    {
+      degree: 'Senior Secondary (XI-XII), Science Stream',
+      institution: 'Sarvodaya Vidyalaya (GBSSS), Dr. Mukherjee Nagar',
+      year: 'Apr 2021 - Mar 2023',
+      details: '',
+    },
+  ],
+  certificates: [
+    {
+      title: 'Add your certificate title', // TODO e.g. "Full Stack Web Development"
+      issuer: 'Add issuing organization', // TODO e.g. "Coursera", "freeCodeCamp"
+      date: 'Add completion date', // TODO e.g. "2025"
+      url: 'https://drive.google.com/file/d/1Q7ijp-iSR3aQCfgyABwSL0lObpkqdgze/view?usp=drive_link', // TODO: add a link to view/verify this certificate, then repeat this block for more
     },
   ],
   softSkills: [
@@ -119,7 +149,7 @@ const profile = {
     'Analytical Thinking',
   ],
   achievements: [
-    'Solved numerous DSA problems in Java and C++',
+    'Solved numerous DSA problems in Javascript and python on platforms like LeetCode, Codeforces' ,
     'Strong understanding of React Hooks, Context API, Routing, and State Management',
     'Experience with deployment workflows and Git',
   ],

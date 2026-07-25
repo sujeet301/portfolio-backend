@@ -10,6 +10,16 @@ const educationSchema = new mongoose.Schema(
   { _id: false }
 );
 
+const certificateSchema = new mongoose.Schema(
+  {
+    title: String,
+    issuer: String,
+    date: String,
+    url: String, // link to view/verify the certificate
+  },
+  { _id: false }
+);
+
 // Only one Profile document should ever exist — it represents "you".
 const profileSchema = new mongoose.Schema(
   {
@@ -25,6 +35,7 @@ const profileSchema = new mongoose.Schema(
     resumeUrl: { type: String, default: '' },
     profileImage: { type: String, default: '' }, // hosted image URL (e.g. Cloudinary, imgur)
     education: [educationSchema],
+    certificates: [certificateSchema],
     softSkills: [{ type: String }],
     achievements: [{ type: String }],
     languages: [{ type: String }],
