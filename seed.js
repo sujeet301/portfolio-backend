@@ -64,7 +64,7 @@ const projects = [
     description:
       'A responsive movie discovery app using the TMDB API, with a watchlist, favorites list, and OTP-based authentication.',
     techStack: ['React', 'TMDB API', 'OTP Auth'],
-    githubUrl: 'https://github.com/sujeet301/multishop-frontend', // TODO: your resume PDF's links for this project also point to the MultiShop repos by mistake — add the real frontend repo URL here
+    githubUrl: 'https://github.com/sujeet301/movieverse-frontend',
     liveUrl: 'https://movieverse-frontend.vercel.app/', 
     featured: true,
     order: 3,
@@ -111,12 +111,12 @@ const profile = {
   linkedinUrl: 'https://www.linkedin.com/in/sujeet-chaudhary-236bbb374 ', 
   portfolioUrl: 'https://portfolio-frontend-gold-tau.vercel.app/',
   resumeUrl: 'https://drive.google.com/file/d/17YBpLkqQMIfEAg80u5hejWSPVmPPteb8/view?usp=drive_link',
-  profileImage: '', // TODO: add a hosted image URL (or paste one in the admin dashboard)
+  profileImage: 'https://res.cloudinary.com/i47xzmbo/image/upload/v1784976762/myimage_zbn23n.png', 
   education: [
     {
       degree: 'Bachelor of Technology (B.Tech), Computer Science',
       institution: 'IITM Group of Institutions, Murthal',
-      year: '2023 - 2027 ', // TODO: confirm your expected graduation year, this is estimated from a standard 4-year B.Tech
+      year: '2023 - 2027 ', 
       details:
         'Relevant coursework: Data Structures & Algorithms, DBMS, Operating Systems, Computer Networks, Software Engineering, OOP',
     },
@@ -135,10 +135,10 @@ const profile = {
   ],
   certificates: [
     {
-      title: 'Add your certificate title', // TODO e.g. "Full Stack Web Development"
-      issuer: 'Add issuing organization', // TODO e.g. "Coursera", "freeCodeCamp"
-      date: 'Add completion date', // TODO e.g. "2025"
-      url: 'https://drive.google.com/file/d/1Q7ijp-iSR3aQCfgyABwSL0lObpkqdgze/view?usp=drive_link', // TODO: add a link to view/verify this certificate, then repeat this block for more
+      title: 'Web Development Course (PHP)',
+      issuer: 'CCDM (ISO 9001:2015 Certified Institute)', 
+      date: 'Jul 2025', 
+      url: 'https://drive.google.com/file/d/1Q7ijp-iSR3aQCfgyABwSL0lObpkqdgze/view?usp=drive_link',
     },
   ],
   softSkills: [

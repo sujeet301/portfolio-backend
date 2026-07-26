@@ -12,15 +12,21 @@ const authRoutes = require('./routes/authRoutes');
 const skillRoutes = require('./routes/skillRoutes');
 const projectRoutes = require('./routes/projectRoutes');
 const profileRoutes = require('./routes/profileRoutes');
+const chatRoutes = require('./routes/chatRoutes');
 
 connectDB();
 
 const app = express();
 
+// Normalize CLIENT_URL so a trailing slash in the env var (a common copy-paste
+// mistake) can't cause the origin comparison to fail — browsers match this
+// value character-for-character.
+const clientUrl = (process.env.CLIENT_URL || 'http://localhost:5173').replace(/\/+$/, '');
+
 app.use(helmet());
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || 'http://localhost:5173',
+    origin: clientUrl,
     credentials: true,
   })
 );
@@ -39,6 +45,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/skills', skillRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/profile', profileRoutes);
+app.use('/api/chat', chatRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
