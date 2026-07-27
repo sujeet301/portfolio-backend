@@ -18,10 +18,17 @@ connectDB();
 
 const app = express();
 
+// Render (like Heroku, most PaaS/cloud hosts) sits your app behind a reverse
+// proxy, which sets X-Forwarded-For. Trusting exactly one hop lets Express
+// resolve the real visitor IP instead of the proxy's IP, so express-rate-limit
+// can rate-limit per visitor rather than globally. See:
+// https://express-rate-limit.github.io/ERR_ERL_UNEXPECTED_X_FORWARDED_FOR/
+app.set('trust proxy', 1);
+
 // Normalize CLIENT_URL so a trailing slash in the env var (a common copy-paste
 // mistake) can't cause the origin comparison to fail — browsers match this
 // value character-for-character.
-const clientUrl = (process.env.CLIENT_URL).replace(/\/+$/, '');
+const clientUrl = (process.env.CLIENT_URL || 'http://localhost:5173').replace(/\/+$/, '');
 
 app.use(helmet());
 app.use(
