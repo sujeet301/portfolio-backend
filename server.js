@@ -28,7 +28,7 @@ app.set('trust proxy', 1);
 // Normalize CLIENT_URL so a trailing slash in the env var (a common copy-paste
 // mistake) can't cause the origin comparison to fail — browsers match this
 // value character-for-character.
-const clientUrl = (process.env.CLIENT_URL || 'http://localhost:5173').replace(/\/+$/, '');
+const clientUrl = (process.env.CLIENT_URL).replace(/\/+$/, '');
 
 app.use(helmet());
 app.use(
@@ -56,6 +56,9 @@ app.use('/api/chat', chatRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
+
+
+
 
 const PORT = process.env.PORT || 5000;
 
